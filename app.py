@@ -32,6 +32,21 @@ st.markdown("""
 > **Author:** [Leo Barlach](https://www.linkedin.com/in/leo-barlach/)
 """)
 
+with st.expander("📖 How to use this app"):
+    st.markdown("""
+    **To Receive a Message:**
+    1. Select **Receiving Message**.
+    2. Generate a new pair of RSA keys or enter your existing private key.
+    3. Share the **Public Key** with the sender. **Keep the Private Key secret!**
+    4. Paste the encrypted message you receive into the text area and click **Decrypt Message**.
+
+    **To Send a Message:**
+    1. Select **Sending Message**.
+    2. Enter the recipient's **Public Key** (`e` and `n`).
+    3. Type your message and click **Generate Encrypted Text**.
+    4. Send the resulting encrypted integer to the recipient.
+    """)
+
 # Toggle for mode selection
 mode = st.radio("Select Mode:", ["Receiving Message", "Sending Message"], horizontal=True)
 
