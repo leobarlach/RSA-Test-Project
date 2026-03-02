@@ -75,12 +75,13 @@ if mode == "Receiving Message":
             
             st.markdown("#### Public Key (Share this!)")
             st.info(f"**e:** {st.session_state.generated_e}\n\n**n:** {st.session_state.generated_n}")
-            public_key_str = f"The Public Keys are:\nPublic exponent (e): {st.session_state.generated_e}\nmodulus (n): {st.session_state.generated_n}"
+            public_key_str = f"The Public Keys are:\nPublic exponent (e): {st.session_state.generated_e}\nModulus (n): {st.session_state.generated_n}"
             st_copy_to_clipboard(public_key_str, "Copy Public Key to Clipboard", "Copied!")
             
             st.markdown("#### Private Key (Keep Secret!)")
             st.error(f"**d:** {st.session_state.generated_d}\n\n**n:** {st.session_state.generated_n}")
-            private_key_str = f"The Private Keys are:\nPrivate exponent (d): {st.session_state.generated_d}\nmodulus (n): {st.session_state.generated_n}"
+            private_key_str = f"The Private Keys are:\nPrivate exponent (d): {st.session_state.generated_d}\nModulus (n): {st.session_state.generated_n}"
+
             st_copy_to_clipboard(private_key_str, "Copy Private Key to Clipboard", "Copied!")
             
             # Use these keys for decryption
