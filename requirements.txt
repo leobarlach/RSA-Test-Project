@@ -1,0 +1,5 @@
+numpy
+scipy
+sympy
+streamlit
+st-copy-to-clipboard
