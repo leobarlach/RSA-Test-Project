@@ -2,7 +2,10 @@
 
 Trial project to test Antigravity.
 
-This project is a coding exercise. It relies on a basic implementation of the RSA algorithm (see [RSA cryptosystem on Wikipedia](https://en.wikipedia.org/wiki/RSA_cryptosystem) for more details).
+> [!WARNING]
+> This project is a coding exercise and a basic implementation of the RSA algorithm. It is **NOT** meant to be secure and should not be used for actual cryptographic or security purposes.
+
+This project relies on a basic implementation of the RSA algorithm (see [RSA cryptosystem on Wikipedia](https://en.wikipedia.org/wiki/RSA_cryptosystem) for more details).
 
 ## Features
 - Generates RSA public and private keys from prime numbers.
