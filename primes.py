@@ -64,13 +64,13 @@ def check_if_prime(x):
     # If not divisible by any small primes, run Miller-Rabin
     return miller_rabin_test(x)
 
-def generate_large_prime(n=255):
+def generate_large_prime(n=512):
     """
     Generates a large prime number starting from a random n-bit number.
-    Uses n=255 bits by default.
+    Uses n=512 bits by default.
     """
-    # Create a random number with n binary digits
-    rand_num = random.getrandbits(n)
+    # Create a random number with n-1 binary digits
+    rand_num = random.getrandbits(n - 1)
     
     # Take 2*rand_num + 1 to assure the number is odd
     candidate = 2 * rand_num + 1
@@ -92,8 +92,7 @@ def test_generation_time():
         times = []
         for _ in range(num_trials):
             start_time = time.time()
-            # We pass bits - 1 because generate_large_prime shifts left by 1 (adds 1 bit)
-            generate_large_prime(bits - 1) 
+            generate_large_prime(bits) 
             end_time = time.time()
             times.append(end_time - start_time)
             
